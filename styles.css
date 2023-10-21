@@ -1,0 +1,99 @@
+/* Course: SENG 513 */ 
+/* Date: OCT 20, 2023 */ 
+/* Assignment 2 */
+/* Name: Jizhe Li */
+/* UCID: 30115255 */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+  height: 100vh;
+  font-size: 36px;
+  color: white;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+h1 {
+  display: block;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Create two columns: one for the "Turn:" div and one for the board container */
+  grid-template-rows: 1fr; /* Create one row to match the height of the board container */
+}
+
+.turn-text {
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+/* .board p {
+  display: block;
+  justify-content: center;
+  align-items: center;
+} */
+
+.board-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px; /* Set a fixed width for the grid container */
+  height: 400px; /* Set a fixed height for the grid container */
+}
+
+button {
+  width: 100%; /* Buttons fill their grid cells */
+  height: 100%; /* Buttons fill their grid cells */
+  font-size: 24px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border: 2px solid grey;
+  border-radius: 10%;
+  overflow: hidden; /* Hide content that exceeds the container */
+}
+
+.button-image {
+  max-width: 100%; /* Ensure the img doesn't exceed the button's width */
+  max-height: 100%; /* Ensure the img doesn't exceed the button's height */
+  transition: margin-right 4s; /* Add a transition for the opacity property */
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.score-board {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.score-board-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.turn-text {
+  
+}
+
+.turn {
+  font-size: 24px;
+}
+
