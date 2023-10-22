@@ -1,8 +1,3 @@
-<!-- Course: SENG 513 -->
-<!-- Date: OCT 20, 2023 -->
-<!-- Assignment 2 -->
-<!-- Name: Jizhe Li -->
-<!-- UCID: 30115255 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,46 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tic-Tac-Toe Game Board</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-  <div class="top">
-    <h1>Tic-Tac-Toe</h1>
-    <div class="board">
-      <div class="board-container">
-        <button id="0"></button>
-        <button id="1"></button>
-        <button id="2"></button>
-        <button id="3"></button>
-        <button id="4"></button>
-        <button id="5"></button>
-        <button id="6"></button>
-        <button id="7"></button>
-        <button id="8"></button>
-      </div>
+  <div class="landing-page">
+    <div class="title">
+      <p>Choose Your Board Size</p>
+    </div>
+    <div class="board-option">
+      <a href="./threeByThree.html" id="three_by_three">3 &#215; 3</a>
+      <a href="./fourByFour.html" id="four_by_four">4 &#215; 4</a>
     </div>
   </div>
-  <div class="score-board">
-    <div class="score-board-detail">
-      <p>Player One</p>
-      <p id="score-one">0</p>
-    </div>
-    <div class="score-board-detail">
-      <p>Draw</p>
-      <p id="score-draw">0</p>
-    </div>
-    <div class="score-board-detail">
-      <p>Player Two</p>
-      <p id="score-two">0</p>
-    </div>
-    <div id="turn-next" class="score-board-detail">
-      <p>Turn</p>
-      <p id="turn">Player 1</p>
-    </div>
-  </div>
-  <script type="text/javascript" src="./board.js"></script>
-  <script type="text/javascript" src="./logic.js"></script>
 </body>
 
 </html>

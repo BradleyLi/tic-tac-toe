@@ -1,0 +1,24 @@
+.landing-page {
+  background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  font-size: 80px;
+}
+
+.board-option {
+  display: flex;
+  justify-content: space-around;
+  gap: 150px;
+}
+
+a {
+  padding: 20px;
+  cursor: pointer;
+  border: thick solid white;
+  border-radius: 15%;
+}
