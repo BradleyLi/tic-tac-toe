@@ -1,0 +1,59 @@
+/* Course: SENG 513 */ 
+/* Date: OCT 21, 2023 */ 
+/* Assignment 2 */
+/* Name: Jizhe Li */
+/* UCID: 30115255 */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+/*
+  The following reset.css is used to reset default css styles on different browsers to ensure consistency 
+  among all browsers. 
+  
+  Here is the reference to the following source code: https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/#top-of-site
+*/
+
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+/* :where() a pseudo-class that allows to group multiple selectors together and apply styles to elements that match any of the selectors within the parentheses.
+:not(...): This is a pseudo-class that negates the selection. Elements matching the selectors within the parentheses are excluded from the selection.
+iframe, canvas, img, svg, video: These are the elements that are explicitly excluded from the selection. The :not(...) pseudo-class ensures that the styles are not applied to these elements.
+:not(svg *): This part of the selector excludes all descendants of SVG elements from the selection. It's saying that even if an element is within an SVG, it should not be selected. */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert; /* It restores the display property to its inherited value. */
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  Remove list styles (bullets/numbers)
+  in case you use it with normalize.css
+*/
+ol,
+ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+body {
+  font-family: Bangers, sans-serif;
+}
