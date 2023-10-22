@@ -13,6 +13,12 @@ body {
   color: white;
 }
 
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .top {
   display: flex;
   flex-direction: column;
@@ -22,6 +28,7 @@ body {
 
 h1 {
   display: block;
+  margin: 40px;
 }
 
 .board {
@@ -36,16 +43,18 @@ h1 {
   justify-content: center; /* Horizontally center the content */
 }
 
-/* .board p {
-  display: block;
-  justify-content: center;
-  align-items: center;
-} */
-
-.board-container {
+.board-container-three {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  width: 400px; /* Set a fixed width for the grid container */
+  height: 400px; /* Set a fixed height for the grid container */
+}
+
+.board-container-four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   width: 400px; /* Set a fixed width for the grid container */
   height: 400px; /* Set a fixed height for the grid container */
 }
@@ -68,20 +77,13 @@ button {
   transition: margin-right 4s; /* Add a transition for the opacity property */
 }
 
-.dashboard {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 60px;
-}
-
 .score-board {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  margin-top: 60px;
+  gap: 200px;
+  margin: 60px;
 }
 
 .score-board-detail {
@@ -89,11 +91,30 @@ button {
   flex-direction: column;
 }
 
-.turn-text {
-  
+.score-board-detail p {
+  margin: 0;
+  text-align: center;
+}
+
+#score-one, #score-draw, #score-two, #turn {
+  margin-top: 1em;
+  font-size: 24px;
 }
 
 .turn {
   font-size: 24px;
+}
+
+.interaction {
+  display: flex;
+  justify-content: space-around;
+  gap: 160px;
+}
+
+.interaction a{
+  display: block;
+  display: flex;
+  justify-content: center;
+  width: 150px;
 }
 
