@@ -11,7 +11,7 @@ function clickHandler(id) {
     imgElement.classList.add('button-image');
 
     if (step % 2 === 1) {
-      imgElement.src = './cross.png';
+      imgElement.src = './assets/cross.png';
       imgElement.alt = 'cross';
       button.appendChild(imgElement);
       step++;
@@ -19,7 +19,7 @@ function clickHandler(id) {
       // update the corresponding board array with either 0 or 1 depending on if it is crosses or circles
       board[id] = 0;
     } else {
-      imgElement.src = './circle.png';
+      imgElement.src = './assets/circle.png';
       imgElement.alt = 'circle';
       button.appendChild(imgElement);
       step++;
