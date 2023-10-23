@@ -2,7 +2,7 @@
 
 **Title:** Tic-Tac-Toe
 
-**Target Platform:** Desktop, Mobile (Cross-platform)
+**Target Platform:** Desktop
 
 **Game Genre:** Puzzle
 
@@ -12,7 +12,7 @@ The primary goal of Tic-Tac-Toe is to be the first player to form a line of thre
 
 **Rules of the Game:**
 
-- The game is played on a 3x3 grid where players take turns to place their symbol.
+- The game is played on a 3x3 or 4x4 grid where players take turns to place their symbol.
 - Player 1 uses "X," and Player 2 uses "O."
 - Players alternate their turns, with Player 1 starting.
 - The game ends when one player achieves a winning combination or when the grid is filled without a winner (resulting in a draw).
