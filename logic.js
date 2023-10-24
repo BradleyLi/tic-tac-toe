@@ -1,5 +1,5 @@
 function displayTurn() {
-  const turn = document.querySelector('#turn');
+  const turn = document.getElementById('turn');
   turn.textContent = `Player ${(step - 1) % 2 + 1}`;
 }
 
