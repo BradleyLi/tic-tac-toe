@@ -88,14 +88,10 @@ function showWinner(winner) {
 
 // Function to draw a line through the winning combination
 function drawWinningLine(size, ...winningCombination) {
-  console.log(`winningCombination = ${winningCombination}`);
-
   // Get the positions of the buttons in the winning combination
   const positions = winningCombination.map((id) => {
     return document.getElementById(id).getBoundingClientRect();
   });
-
-  console.log(`positions_length = ${positions.length}`);
 
   // Create an SVG element to hold the line
   const svgNS = "http://www.w3.org/2000/svg";
@@ -104,7 +100,7 @@ function drawWinningLine(size, ...winningCombination) {
 
   // Set attributes for the SVG element
   svg.setAttribute("width", "100%");
-  svg.setAttribute("height", "100%");
+  svg.setAttribute("height", "80%");
   svg.style.position = "absolute";
   svg.style.top = "0";
   svg.style.left = "0";
@@ -276,8 +272,6 @@ function checkWinSmall() {
     score_draw++;
   }
 
-  console.log(`win = ${win}`);
-
   if (win !== -1) {
     // update the dashboard score
     const one = document.getElementById("score-one");
@@ -289,9 +283,6 @@ function checkWinSmall() {
     two.textContent = `${score_two}`;
 
     if (win !== 2) {
-      console.log(first_id);
-      console.log(second_id);
-      console.log(third_id);
       // Call the function to draw the line
       drawWinningLine(3, first_id, second_id, third_id);
     }
@@ -498,7 +489,11 @@ function checkWinLarge() {
     (board[0] === 0 && board[5] === 0 && board[10] === 0) ||
     (board[5] === 0 && board[10] === 0 && board[15] === 0) ||
     (board[4] === 0 && board[9] === 0 && board[14] === 0) ||
-    (board[1] === 0 && board[6] === 0 && board[11] === 0)
+    (board[1] === 0 && board[6] === 0 && board[11] === 0) ||
+    (board[3] === 0 && board[6] === 0 && board[9] === 0) ||
+    (board[6] === 0 && board[9] === 0 && board[12] === 0) ||
+    (board[2] === 0 && board[5] === 0 && board[8] === 0) ||
+    (board[7] === 0 && board[10] === 0 && board[13] === 0)
   ) {
     win = 0;
     score_one++;
@@ -514,16 +509,36 @@ function checkWinLarge() {
       first_id = 4;
       second_id = 9;
       third_id = 14;
-    } else {
+    } else if (board[1] === 0) {
       first_id = 1;
       second_id = 6;
       third_id = 11;
+    } else if (board[3] === 0) {
+      first_id = 3;
+      second_id = 6;
+      third_id = 9;
+    } else if (board[6] === 0) {
+      first_id = 6;
+      second_id = 9;
+      third_id = 12;
+    } else if (board[2] === 0) {
+      first_id = 2;
+      second_id = 5;
+      third_id = 8;
+    } else {
+      first_id = 7;
+      second_id = 10;
+      third_id = 13;
     }
   } else if (
     (board[0] === 1 && board[5] === 1 && board[10] === 1) ||
     (board[5] === 1 && board[10] === 1 && board[15] === 1) ||
     (board[4] === 1 && board[9] === 1 && board[14] === 1) ||
-    (board[1] === 1 && board[6] === 1 && board[11] === 1)
+    (board[1] === 1 && board[6] === 1 && board[11] === 1) ||
+    (board[3] === 1 && board[6] === 1 && board[9] === 1) ||
+    (board[6] === 1 && board[9] === 1 && board[12] === 1) ||
+    (board[2] === 1 && board[5] === 1 && board[8] === 1) ||
+    (board[7] === 1 && board[10] === 1 && board[13] === 1)
   ) {
     win = 1;
     score_two++;
@@ -539,10 +554,26 @@ function checkWinLarge() {
       first_id = 4;
       second_id = 9;
       third_id = 14;
-    } else {
+    } else if (board[1] === 1) {
       first_id = 1;
       second_id = 6;
       third_id = 11;
+    } else if (board[3] === 1) {
+      first_id = 3;
+      second_id = 6;
+      third_id = 9;
+    } else if (board[6] === 1) {
+      first_id = 6;
+      second_id = 9;
+      third_id = 12;
+    } else if (board[2] === 1) {
+      first_id = 2;
+      second_id = 5;
+      third_id = 8;
+    } else {
+      first_id = 7;
+      second_id = 10;
+      third_id = 13;
     }
   } else if (
     board[0] !== -1 &&
@@ -566,8 +597,6 @@ function checkWinLarge() {
     score_draw++;
   }
 
-  console.log(`win = ${win}`);
-
   if (win !== -1) {
     // update the dashboard score
     const one = document.getElementById("score-one");
@@ -579,9 +608,6 @@ function checkWinLarge() {
     two.textContent = `${score_two}`;
 
     if (win !== 2) {
-      console.log(first_id);
-      console.log(second_id);
-      console.log(third_id);
       // Call the function to draw the line
       drawWinningLine(4, first_id, second_id, third_id);
     }
