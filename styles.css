@@ -118,3 +118,16 @@ button {
   width: 150px;
 }
 
+/* CSS to simulate a line through the buttons */
+.winning-line::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 10px; /* or 100% if you want a full-width line */
+  height: 100%;
+  background-color: #ff0000; /* color of the line */
+  z-index: 1;
+}
+
