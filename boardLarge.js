@@ -1,6 +1,6 @@
 /* Course: SENG 513 */
-/* Date: OCT 20, 2023 */
-/* Assignment 2 */
+/* Date: NOV 13, 2023 */
+/* Assignment 3 */
 /* Name: Jizhe Li */
 /* UCID: 30115255 */
 
